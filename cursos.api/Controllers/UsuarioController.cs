@@ -1,5 +1,6 @@
 using cursos.api.Models.Usuarios;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace cursos.api.Controllers
 {
@@ -8,6 +9,15 @@ namespace cursos.api.Controllers
 
 	public class UsuarioController : ControllerBase
 	{
+		/// <summary>
+		/// Este serviço permite autenticar um usuário cadastrado e ativo.
+		/// </summary>
+		/// <param name="loginViewModelInput">View model do login</param>
+		/// <returns>Retorna status ok, dados do usuário e o token em caso de sucesso</returns>
+		[SwaggerResponse(statusCode: 200, description: "Sucesso ao autenticar", Type = typeof(LoginViewModelInput))]
+		//[SwaggerResponse(statusCode: 400, description: "Campos obrigatórios", Type = typeof(LoginViewModelInput))]
+		//[SwaggerResponse(statusCode: 500, description: "Erro interno", Type = typeof(LoginViewModelInput))]
+
 
 		[HttpPost]
 		[Route("logar")]
