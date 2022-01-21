@@ -4,6 +4,13 @@
         <name>cursos.api</name>
     </assembly>
     <members>
+        <!-- Badly formed XML comment ignored for member "M:cursos.api.Controllers.CursoController.Post(cursos.api.Models.Cursos.CursoViewModelInput)" -->
+        <member name="M:cursos.api.Controllers.CursoController.Get">
+            <summary>
+            Este serviço permite obter todos os cursos ativos do usuário.
+            </summary>
+            <returns>Retorna status ok e dados do curso do usuário</returns>
+        </member>
         <member name="M:cursos.api.Controllers.UsuarioController.Logar(cursos.api.Models.Usuarios.LoginViewModelInput)">
             <summary>
             Este serviço permite autenticar um usuário cadastrado e ativo.
